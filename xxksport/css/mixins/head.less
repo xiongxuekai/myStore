@@ -1,0 +1,181 @@
+/* 头部样式 在视口宽度大于992px的状态下*/
+@media only screen and (min-width:992px) {
+    #header {
+
+        /* logo */
+        .header-logo {
+            padding: 10px 40px;
+
+            span {
+                display: none;
+            }
+
+            .logo {
+                img:first-child {
+                    background-size: 240px 40px;
+                    float: left;
+                    width: 240px;
+                    height: 40px;
+                    margin: 14px 0 0 0;
+                }
+
+                img:last-child {
+                    display: none;
+                }
+            }
+
+            /* 二维码 */
+            img:nth-child(3) {
+                float: right;
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        /* 导航栏 */
+        nav {
+            background: black;
+            padding: 0 40px;
+
+            ul {
+                margin: 0;
+                padding: 0;
+
+                &>li {
+                    &:hover {
+                        a {
+                            color: #ffffff;
+                        }
+                    }
+
+                    float: left;
+                    width: 100px;
+                    height: 48px;
+                    text-align: center;
+
+                    &>a {
+                        line-height: 48px;
+                        color: #ffffff;
+                        &:extend(.font14 all);
+                    }
+                }
+            }
+        }
+    }
+
+    /* 隐藏点击蒙版 */
+    .click_wrap {
+        display: none;
+    }
+}
+
+/* 头部样式 在视口宽度小于992px的状态下*/
+
+@media only screen and (max-width:992px) {
+    #header {
+        height: 60px;
+
+        .header-logo {
+            z-index: 10;
+            background: black;
+            height: 60px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+
+            /* 字体图标 */
+            span {
+                padding: 18px;
+                font-size: 20px;
+                color: #c5bfbf;
+            }
+
+            span:nth-child(1) {
+                float: left;
+            }
+
+            span:nth-child(4) {
+                float: right;
+            }
+
+            /* logo图片在小屏时 */
+            .logo {
+                width: 120px;
+                height: 30px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 20px;
+                display: block;
+                margin: auto;
+
+                img:first-child {
+                    display: none;
+                }
+
+                img:last-child {
+                    display: block;
+                    width: 120px;
+                    height: 20px;
+                }
+            }
+
+            /* 二维码 */
+            img:nth-child(3) {
+                display: none;
+            }
+        }
+
+        /* 导航栏 */
+        nav {
+            background: black;
+            width: 200px;
+            height: 1000px;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+            left: -200px;
+
+            /* 侧边导航栏 */
+            ul {
+                width: 100%;
+                margin: 0;
+                padding: 40px 0 0 0;
+
+                &>li {
+                    padding-left: 20px;
+                    border-bottom: 1px solid #444343;
+
+                    /* 侧边导航栏覆盖li */
+                    &:hover {
+                        background-color: #444343;
+
+                        a {
+                            display: block;
+                            transform: translateX(10px);
+                            transition-duration: 1s;
+                        }
+                    }
+
+                    &>a {
+                        line-height: 48px;
+                        color: #ffffff;
+                        &:extend(.font14 all);
+                    }
+                }
+            }
+        }
+    }
+
+    /* 点击蒙版 */
+    .click_wrap {
+        width: 100%;
+        height: 1000px;
+        position: fixed;
+        top: 0;
+        left: -1500px;
+        z-index: 5;
+        background-color: gray;
+        opacity: 0.8;
+    }
+}

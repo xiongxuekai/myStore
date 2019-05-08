@@ -1,0 +1,147 @@
+/* 头部样式 在视口宽度大于992px的状态下*/
+@media only screen and (min-width: 992px) {
+  #header {
+    /* logo */
+    /* 导航栏 */
+  }
+  #header .header-logo {
+    padding: 10px 40px;
+    /* 二维码 */
+  }
+  #header .header-logo span {
+    display: none;
+  }
+  #header .header-logo .logo img:first-child {
+    background-size: 240px 40px;
+    float: left;
+    width: 240px;
+    height: 40px;
+    margin: 14px 0 0 0;
+  }
+  #header .header-logo .logo img:last-child {
+    display: none;
+  }
+  #header .header-logo img:nth-child(3) {
+    float: right;
+    width: 70px;
+    height: 70px;
+  }
+  #header nav {
+    background: black;
+    padding: 0 40px;
+  }
+  #header nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  #header nav ul > li {
+    float: left;
+    width: 100px;
+    height: 48px;
+    text-align: center;
+  }
+  #header nav ul > li:hover a {
+    color: #ffffff;
+  }
+  #header nav ul > li > a {
+    line-height: 48px;
+    color: #ffffff;
+  }
+  /* 隐藏点击蒙版 */
+  .click_wrap {
+    display: none;
+  }
+}
+/* 头部样式 在视口宽度小于992px的状态下*/
+@media only screen and (max-width: 992px) {
+  #header {
+    height: 60px;
+    /* 导航栏 */
+  }
+  #header .header-logo {
+    z-index: 10;
+    background: black;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    /* 字体图标 */
+    /* logo图片在小屏时 */
+    /* 二维码 */
+  }
+  #header .header-logo span {
+    padding: 18px;
+    font-size: 20px;
+    color: #c5bfbf;
+  }
+  #header .header-logo span:nth-child(1) {
+    float: left;
+  }
+  #header .header-logo span:nth-child(4) {
+    float: right;
+  }
+  #header .header-logo .logo {
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20px;
+    display: block;
+    margin: auto;
+  }
+  #header .header-logo .logo img:first-child {
+    display: none;
+  }
+  #header .header-logo .logo img:last-child {
+    display: block;
+    width: 120px;
+    height: 20px;
+  }
+  #header .header-logo img:nth-child(3) {
+    display: none;
+  }
+  #header nav {
+    background: black;
+    width: 200px;
+    height: 1000px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    left: -200px;
+    /* 侧边导航栏 */
+  }
+  #header nav ul {
+    width: 100%;
+    margin: 0;
+    padding: 40px 0 0 0;
+  }
+  #header nav ul > li {
+    padding-left: 20px;
+    border-bottom: 1px solid #444343;
+    /* 侧边导航栏覆盖li */
+  }
+  #header nav ul > li:hover {
+    background-color: #444343;
+  }
+  #header nav ul > li:hover a {
+    display: block;
+    transform: translateX(10px);
+    transition-duration: 1s;
+  }
+  #header nav ul > li > a {
+    line-height: 48px;
+    color: #ffffff;
+  }
+  /* 点击蒙版 */
+  .click_wrap {
+    width: 100%;
+    height: 1000px;
+    position: fixed;
+    top: 0;
+    left: -1500px;
+    z-index: 5;
+    background-color: gray;
+    opacity: 0.8;
+  }
+}
